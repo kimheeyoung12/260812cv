@@ -4,26 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김희영 | AI·SW 전문강사 이력서</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #fca311;
+            --secondary-color: #e85d04;
+            --text-color: #1f2937;
+            --bg-color: #fffbeb;
+            --card-bg: #ffffff;
+            --border-color: #fde68a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(252, 163, 17, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            color: #4b5563;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 1rem;
+            color: #4b5563;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: #374151;
+            word-break: keep-all;
+            background-color: #fffdf5;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            background-color: #fef3c7;
+            color: #d97706;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .item {
+            margin-bottom: 16px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #111827;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            color: #4b5563;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        li:before {
+            content: '✨';
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 프로필 사진 및 헤더 영역 -->
-        <header class="profile-header">
-            <div class="profile-img-container">
-                <img src="김희영증명사진.jpg" alt="김희영 프로필 사진" class="profile-img">
-            </div>
-            <div class="profile-text">
-                <h1>김희영</h1>
-                <p class="subtitle">AI·SW 전문강사 (초등 고학년 대상)</p>
-            </div>
-        </header>
 
-        <!-- 이력서 본문 내용 -->
-        <section class="section">
-            <h2>소개</h2>
-            <p>초등 고학년을 대상으로 쉽고 재미있는 AI·SW 교육을 진행하고 있는 강사 김희영입니다.</p>
-        </section>
-    </div>
+<div class="container">
+    <header>
+        <h1>김희영</h1>
+        <p class="subtitle">초등 학생들의 눈높이에 맞춘 AI·SW 전문강사 💡</p>
+        <div class="contact-info">
+            <span>📧 이메일: heeyoung4861@gmail.com</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>소개 (Summary)</h2>
+        <p class="intro">
+            초등 학생들을 대상으로 인공지능과 소프트웨어 교육을 진행하는 전문 강사입니다. 
+            학생들이 프로그래밍 개념을 쉽고 재미있게 원리로 이해하고, 컴퓨팅 사고력을 기를 수 있도록 돕습니다.
+        </p>
+    </section>
+
+    <section>
+        <h2>주요 강의 과목 (Specialties)</h2>
+        <div class="tags">
+            <span class="tag">엔트리 (Entry) 블록코딩</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>강의 내용 (Curriculum)</h2>
+        <div class="item">
+            <span class="item-title">엔트리 활용 프로그래밍 기초 및 응용</span>
+            <ul>
+                <li>기초 블록 활용 프로그래밍 원리 및 논리적 구조 이해</li>
+                <li>게임 및 미디어 아트 등 흥미 중심 프로젝트 제작</li>
+                <li>엔트리 인공지능 및 데이터 분석 블록 활용 실습</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
 </body>
 </html>
