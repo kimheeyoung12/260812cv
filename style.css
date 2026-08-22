@@ -1,11 +1,10 @@
 :root {
-    --primary-color: #d97706;       /* 따뜻하고 세련된 앰버/코랄 포인트 */
-    --text-main: #1d1d1f;           /* 애플 스타일의 선명한 다크 그레이 */
-    --text-muted: #6e6e73;          /* 부드러운 회색 설명 텍스트 */
-    --bg-color: #f5f5f7;            /* 고급스러운 실버 톤 배경 */
-    --card-bg: #ffffff;             /* 카드 배경 */
-    --border-subtle: #d2d2d7;       /* 섬세한 경계선 */
-    --input-bg: #fbfbfd;            /* 입력창 배경 */
+    --bg-color: #f5f5f7;            /* 애플 특유의 실버 그레이 배경 */
+    --card-bg: #ffffff;             /* 단락별 독립 카드 배경 */
+    --text-primary: #1d1d1f;        /* 선명한 블랙 */
+    --text-secondary: #86868b;      /* 부드러운 회색 설명글 */
+    --accent-color: #0071e3;        /* 애플 시그니처 블루 포인트 */
+    --border-color: #d2d2d7;        /* 섬세한 라인 */
 }
 
 * {
@@ -13,38 +12,44 @@
     margin: 0;
     padding: 0;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-main);
+    color: var(--text-primary);
     line-height: 1.8;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
+/* 전체 감싸는 껍데기 대신, 각 단락이 독립된 프리미엄 카드로 분리됩니다 */
 .container {
     max-width: 760px;
     margin: 0 auto;
-    background: var(--card-bg);
-    padding: 60px 50px;
-    border-radius: 32px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* 각 단락 사이의 넓고 시원한 여백 */
 }
 
-/* 프로필 헤더 영역 */
+/* 모든 단락(섹션)을 애플 스타일의 독립된 카드 블록으로 디자인 */
+header, section {
+    background: var(--card-bg);
+    padding: 50px 60px;
+    border-radius: 28px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* 1. 프로필 헤더 카드 */
 header {
     display: flex;
     align-items: center;
-    gap: 35px;
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 40px;
-    margin-bottom: 45px;
+    gap: 40px;
 }
 
 .profile-img-container {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     flex-shrink: 0;
 }
 
@@ -53,152 +58,146 @@ header {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .profile-text h1 {
-    font-size: 2.3rem;
-    color: var(--text-main);
+    font-size: 2.6rem;
+    color: var(--text-primary);
     margin-bottom: 6px;
     font-weight: 700;
 }
 
 .profile-text p.subtitle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
     font-weight: 400;
     margin-bottom: 12px;
 }
 
 .contact-info {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
-section {
-    margin-bottom: 45px;
-}
-
+/* 2. 섹션 공통 타이틀 */
 h2 {
-    font-size: 1.25rem;
-    color: var(--text-main);
+    font-size: 1.35rem;
+    color: var(--text-primary);
     margin-bottom: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 h2::before {
     content: '';
     display: inline-block;
-    width: 5px;
+    width: 6px;
     height: 18px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     border-radius: 3px;
 }
 
+/* 3. 소개글 카드 */
 .intro {
-    font-size: 1.05rem;
-    color: #48484a;
+    font-size: 1.1rem;
+    color: #424245;
     word-break: keep-all;
     line-height: 1.9;
-    background-color: #fafafc;
-    padding: 24px;
-    border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
+/* 4. 주요 강의 과목 태그 카드 */
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .tag {
     background-color: #f5f5f7;
-    color: var(--text-main);
-    padding: 10px 20px;
-    border-radius: 20px;
+    color: var(--text-primary);
+    padding: 12px 22px;
+    border-radius: 16px;
     font-size: 0.95rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
     transition: all 0.2s ease;
 }
 
 .tag:hover {
-    background-color: #ebebf0;
-    transform: translateY(-1px);
+    background-color: #e8e8ed;
 }
 
+/* 5. 커리큘럼 아이템 카드 내부 박스 */
 .item {
     margin-bottom: 24px;
-    background: #fafafc;
-    padding: 24px;
+    background: #fbfbfd;
+    padding: 28px;
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.item:last-child {
+    margin-bottom: 0;
 }
 
 .item-title {
     font-weight: 600;
-    font-size: 1.05rem;
-    color: var(--text-main);
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 12px;
     display: block;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 li:before {
-    content: '•';
-    color: var(--primary-color);
+    content: '—';
+    color: var(--accent-color);
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
-/* 🍏 애플 스타일의 모던하고 고급스러운 문의 폼 */
+/* 6. 애플 스토어 스타일의 고급 문의 폼 카드 */
 .contact-form-box {
-    background: #fafafc;
-    padding: 45px 40px;
-    border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    margin-top: 50px;
+    background: var(--card-bg); /* 독립된 카드 형태 유지 */
 }
 
 .contact-form-box h3 {
-    font-size: 1.4rem;
-    color: var(--text-main);
+    font-size: 1.5rem;
+    color: var(--text-primary);
     margin-bottom: 8px;
     font-weight: 700;
 }
 
 .contact-form-box p {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .form-group label {
     display: block;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -208,24 +207,24 @@ li:before {
 .form-group textarea {
     width: 100%;
     padding: 16px 20px;
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--border-color);
     border-radius: 14px;
     font-size: 1rem;
     outline: none;
-    background-color: var(--input-bg);
-    color: var(--text-main);
+    background-color: #fbfbfd;
+    color: var(--text-primary);
     transition: all 0.3s ease;
 }
 
 .form-group input:focus, 
 .form-group textarea:focus {
-    border-color: var(--primary-color);
+    border-color: var(--accent-color);
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.12);
 }
 
 .submit-btn {
-    background-color: var(--text-main);
+    background-color: var(--text-primary);
     color: white;
     border: none;
     padding: 16px;
@@ -236,24 +235,24 @@ li:before {
     width: 100%;
     transition: all 0.3s ease;
     margin-top: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:hover {
     background-color: #3a3a3c;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* 모바일 화면 대응 */
 @media (max-width: 640px) {
+    header, section {
+        padding: 30px 20px;
+    }
     header {
         flex-direction: column;
         text-align: center;
     }
-    .container {
-        padding: 30px 20px;
-    }
-    .contact-form-box {
-        padding: 30px 20px;
+    body {
+        padding: 30px 15px;
     }
 }
