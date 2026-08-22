@@ -151,6 +151,41 @@
             font-size: 0.9rem;
         }
 
+        /* 양방향 버튼 스타일 */
+        .interactive-box {
+            text-align: center;
+            background-color: #fffbeb;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px dashed var(--primary-color);
+            margin-top: 30px;
+        }
+
+        .interactive-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+
+        .interactive-btn:hover {
+            background-color: #d04b02;
+            transform: translateY(-2px);
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
         @media (max-width: 640px) {
             header {
                 flex-direction: column;
@@ -204,7 +239,33 @@
             </ul>
         </div>
     </section>
+
+    <!-- 양방향 상호작용 영역 (JavaScript 체험) -->
+    <section class="interactive-box">
+        <h3>✨ 방문자 응원 메시지</h3>
+        <p style="margin: 8px 0 15px 0; color: #555;">버튼을 누르면 멋진 응원 문구가 나타납니다!</p>
+        <button class="interactive-btn" onclick="showMessage()">응원 메시지 확인하기</button>
+        <div id="message"></div>
+    </section>
 </div>
+
+<!-- 자바스크립트 코드 (양방향 동작 담당) -->
+<script>
+    function showMessage() {
+        const messages = [
+            "🎉 멋진 AI·SW 교육, 항상 응원합니다!",
+            "💻 우리 아이들의 미래 코딩 선생님, 화이팅!",
+            "🚀 상상력을 키워주는 최고의 수업이 될 거예요!",
+            "⭐ 오늘도 즐겁고 유익한 하루 보내세요!"
+        ];
+        
+        // 무작위로 문구 하나 선택
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        
+        // 화면의 #message 공간에 글자 띄우기
+        document.getElementById("message").innerText = messages[randomIndex];
+    }
+</script>
 
 </body>
 </html>
