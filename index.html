@@ -4,232 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김희영 | AI·SW 전문강사 이력서</title>
-    <style>
-        :root {
-            --primary-color: #fca311;
-            --secondary-color: #e85d04;
-            --text-color: #1f2937;
-            --bg-color: #fffbeb;
-            --card-bg: #ffffff;
-            --border-color: #fde68a;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            background-button-color: var(--bg-color);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px -5px rgba(252, 163, 17, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 24px;
-            margin-bottom: 32px;
-        }
-
-        .profile-img-container {
-            width: 130px;
-            height: 130px;
-            flex-shrink: 0;
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-text h1 {
-            font-size: 2.3rem;
-            color: var(--primary-color);
-            margin-bottom: 6px;
-        }
-
-        .profile-text p.subtitle {
-            font-size: 1.15rem;
-            color: #4b5563;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.95rem;
-            color: #4b5563;
-        }
-
-        section {
-            margin-bottom: 32px;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 6px;
-            margin-bottom: 16px;
-            display: inline-block;
-        }
-
-        .intro {
-            font-size: 1.05rem;
-            color: #374151;
-            word-break: keep-all;
-            background-color: #fffdf5;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 8px;
-        }
-
-        .tag {
-            background-color: #fef3c7;
-            color: #d97706;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .item {
-            margin-bottom: 20px;
-        }
-
-        .item-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #111827;
-            margin-bottom: 6px;
-            display: block;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            color: #4b5563;
-            font-size: 1rem;
-        }
-
-        li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        li:before {
-            content: '✨';
-            font-size: 0.9rem;
-        }
-
-        /* 방문자 문의 폼 스타일 */
-        .contact-form-box {
-            background-color: #fffdf5;
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            margin-top: 30px;
-        }
-
-        .contact-form-box h3 {
-            color: var(--secondary-color);
-            margin-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .contact-form-box p {
-            color: #6b7280;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #374151;
-            margin-bottom: 5px;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            transition: 0.2s;
-        }
-
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(252, 163, 17, 0.15);
-        }
-
-        .submit-btn {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.2s;
-        }
-
-        .submit-btn:hover {
-            background-color: #d04b02;
-        }
-
-        @media (max-width: 640px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .container {
-                padding: 24px 16px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -240,90 +15,90 @@
         </div>
         <div class="profile-text">
             <h1>김희영</h1>
-            <p class="subtitle">초등 학생들의 눈높이에 맞춘 AI·SW 전문강사 💡</p>
+            <p class="subtitle">초등 학생들의 눈높이에 맞춘 AI·SW 전문강사</p>
             <div class="contact-info">
-                <span>📧 이메일: heeyoung4861@gmail.com</span>
+                <span>📧 heeyoung4861@gmail.com</span>
             </div>
         </div>
     </header>
 
     <section>
-        <h2>소개 (Summary)</h2>
+        <h2>소개</h2>
         <p class="intro">
-            초등 학생들을 대상으로 인공지능과 소프트웨어 교육을 진행하는 전문 강사입니다. 
-            학생들이 프로그래밍 개념을 쉽고 재미있게 원리로 이해하고, 컴퓨팅 사고력을 기를 수 있도록 돕습니다.
+            초등 고학년을 대상으로 인공지능과 소프트웨어 교육을 진행합니다. 
+            아이들이 프로그래밍 개념을 직관적으로 이해하고, 스스로 논리적 사고력을 확장할 수 있도록 깊이 있게 지도합니다.
         </p>
     </section>
 
     <section>
-        <h2>주요 강의 과목 (Specialties)</h2>
+        <h2>주요 강의 과목</h2>
         <div class="tags">
             <span class="tag">엔트리(Entry) 블록코딩</span>
             <span class="tag">디지털 윤리</span>
-            <span class="tag">CANVA (캔바) 디자인 & AI</span>
-            <span class="tag">뚜루뚜루 등 코딩 교구 활용</span>
+            <span class="tag">CANVA 디자인 & AI</span>
+            <span class="tag">코딩 교구 (뚜루뚜루 등)</span>
         </div>
     </section>
 
     <section>
-        <h2>강의 내용 및 커리큘럼 (Curriculum)</h2>
+        <h2>강의 커리큘럼</h2>
         
         <div class="item">
-            <span class="item-title">1. 엔트리 활용 프로그래밍 기초 및 응용</span>
+            <span class="item-title">01. 엔트리 활용 프로그래밍 기초 및 응용</span>
             <ul>
-                <li>기초 블록 활용 프로그래밍 원리 및 논리적 구조 이해</li>
-                <li>게임 및 미디어 아트 등 흥미 중심 프로젝트 제작</li>
-                <li>엔트리 인공지능 및 데이터 분석 블록 활용 실습</li>
+                <li>기초 블록을 활용한 프로그래밍 원리 및 논리 구조 체화</li>
+                <li>게임 및 미디어 아트 중심의 몰입도 높은 프로젝트 제작</li>
+                <li>엔트리 AI 및 데이터 분석 블록 실습</li>
             </ul>
         </div>
 
         <div class="item">
-            <span class="item-title">2. 디지털 윤리 및 올바른 IT 생활</span>
+            <span class="item-title">02. 디지털 윤리 및 올바른 IT 생활</span>
             <ul>
-                <li>올바른 인터넷 사용 습관 및 사이버 폭력 예방 교육</li>
-                <li>디지털 저작권과 개인정보 보호의 중요성 이해</li>
+                <li>건강한 인터넷 사용 습관 및 사이버 폭력 예방</li>
+                <li>디지털 저작권과 개인정보 보호 가이드</li>
             </ul>
         </div>
 
         <div class="item">
-            <span class="item-title">3. CANVA (캔바)를 활용한 창의 디자인 & AI</span>
+            <span class="item-title">03. CANVA (캔바)를 활용한 창의 디자인 & AI</span>
             <ul>
-                <li>캔바 툴을 활용한 포스터, 카드뉴스 등 시각적 표현 실습</li>
-                <li>생성형 AI 기능을 접목한 창의적인 콘텐츠 제작</li>
+                <li>캔바 툴을 활용한 포스터 및 시각 디자인 실습</li>
+                <li>생성형 AI 기능을 접목한 크리에이티브 콘텐츠 제작</li>
             </ul>
         </div>
 
         <div class="item">
-            <span class="item-title">4. 코딩 교구 (뚜루뚜루 등) 활용 실습</span>
+            <span class="item-title">04. 코딩 교구 (뚜루뚜루 등) 실습</span>
             <ul>
-                <li>교구를 통한 직관적인 코딩 원리 학습 및 신체 활동 연계</li>
-                <li>친구들과 협동하여 미션을 해결하는 프로젝트형 수업</li>
+                <li>교구를 통한 직관적인 코딩 원리 학습</li>
+                <li>협동 미션 수행을 통한 문제해결력 향상</li>
             </ul>
         </div>
     </section>
 
-    <!-- 방문자 문의/상담 신청 폼 -->
+    <!-- 애플 스타일 프리미엄 문의 폼 -->
     <section class="contact-form-box">
-        <h3>📬 강의 문의 및 연락하기</h3>
-        <p>궁금한 점이나 강의 의뢰를 남겨주시면 빠르게 확인 후 연락드리겠습니다.</p>
+        <h3>강의 문의 및 의뢰</h3>
+        <p>궁금하신 사항이나 일정 협의를 남겨주시면, 검토 후 빠르게 회신해 드리겠습니다.</p>
         
         <form action="#" method="POST">
             <div class="form-group">
-                <label for="name">성함 (또는 단체명)</label>
-                <input type="text" id="name" name="name" placeholder="예: 홍길동 / 학부모" required>
+                <label for="name">Name / Organization</label>
+                <input type="text" id="name" name="name" placeholder="성함 또는 단체명을 입력해주세요" required>
             </div>
             
             <div class="form-group">
-                <label for="email">연락처 / 이메일</label>
-                <input type="text" id="email" name="email" placeholder="회신받을 연락처나 이메일을 적어주세요" required>
+                <label for="email">Contact / Email</label>
+                <input type="text" id="email" name="email" placeholder="회신받으실 연락처나 이메일을 입력해주세요" required>
             </div>
             
             <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" rows="4" placeholder="강의 일정, 대상 등 문의하실 내용을 적어주세요." required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="문의하실 내용을 자유롭게 적어주세요." required></textarea>
             </div>
             
-            <button type="submit" class="submit-btn">문의 내용 전송하기</button>
+            <button type="submit" class="submit-btn">문의 전송하기</button>
         </form>
     </section>
 </div>
