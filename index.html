@@ -22,6 +22,7 @@
         }
 
         body {
+            background-button-color: var(--bg-color);
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -122,13 +123,15 @@
         }
 
         .item {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .item-title {
             font-weight: bold;
             font-size: 1.1rem;
             color: #111827;
+            margin-bottom: 6px;
+            display: block;
         }
 
         ul {
@@ -136,11 +139,10 @@
             padding-left: 0;
             color: #4b5563;
             font-size: 1rem;
-            margin-top: 10px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -256,31 +258,55 @@
     <section>
         <h2>주요 강의 과목 (Specialties)</h2>
         <div class="tags">
-            <span class="tag">엔트리 (Entry) 블록코딩</span>
+            <span class="tag">엔트리(Entry) 블록코딩</span>
+            <span class="tag">디지털 윤리</span>
+            <span class="tag">CANVA (캔바) 디자인 & AI</span>
+            <span class="tag">뚜루뚜루 등 코딩 교구 활용</span>
         </div>
     </section>
 
     <section>
-        <h2>강의 내용 (Curriculum)</h2>
+        <h2>강의 내용 및 커리큘럼 (Curriculum)</h2>
+        
         <div class="item">
-            <span class="item-title">엔트리 활용 프로그래밍 기초 및 응용</span>
+            <span class="item-title">1. 엔트리 활용 프로그래밍 기초 및 응용</span>
             <ul>
                 <li>기초 블록 활용 프로그래밍 원리 및 논리적 구조 이해</li>
                 <li>게임 및 미디어 아트 등 흥미 중심 프로젝트 제작</li>
                 <li>엔트리 인공지능 및 데이터 분석 블록 활용 실습</li>
             </ul>
         </div>
+
+        <div class="item">
+            <span class="item-title">2. 디지털 윤리 및 올바른 IT 생활</span>
+            <ul>
+                <li>올바른 인터넷 사용 습관 및 사이버 폭력 예방 교육</li>
+                <li>디지털 저작권과 개인정보 보호의 중요성 이해</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <span class="item-title">3. CANVA (캔바)를 활용한 창의 디자인 & AI</span>
+            <ul>
+                <li>캔바 툴을 활용한 포스터, 카드뉴스 등 시각적 표현 실습</li>
+                <li>생성형 AI 기능을 접목한 창의적인 콘텐츠 제작</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <span class="item-title">4. 코딩 교구 (뚜루뚜루 등) 활용 실습</span>
+            <ul>
+                <li>교구를 통한 직관적인 코딩 원리 학습 및 신체 활동 연계</li>
+                <li>친구들과 협동하여 미션을 해결하는 프로젝트형 수업</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- 방문자 문의/상담 신청 폼 영역 -->
+    <!-- 방문자 문의/상담 신청 폼 -->
     <section class="contact-form-box">
         <h3>📬 강의 문의 및 연락하기</h3>
         <p>궁금한 점이나 강의 의뢰를 남겨주시면 빠르게 확인 후 연락드리겠습니다.</p>
         
-        <!-- 
-          나중에 실제로 이메일을 받으려면 action="https://formspree.io/f/당신의고유주소" 형태로 연결하면 됩니다.
-          지금은 연습용 UI 형태로 구성해 두었습니다!
-        -->
         <form action="#" method="POST">
             <div class="form-group">
                 <label for="name">성함 (또는 단체명)</label>
