@@ -168,6 +168,20 @@ h2::before {
     line-height: 1.9;
 }
 
+/* 🌟 교육 철학 강조 박스 스타일 */
+.highlight-quote {
+    display: block;
+    margin-top: 20px;
+    padding: 18px 22px;
+    background-color: var(--accent-light);
+    color: var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 16px 16px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
 /* 과목 태그 스타일 */
 .tags {
     display: flex;
@@ -191,7 +205,7 @@ h2::before {
     transform: translateY(-2px);
 }
 
-/* 자격증 그리드 카드 스타일 (날짜 제거됨) */
+/* 자격증 그리드 카드 스타일 */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
