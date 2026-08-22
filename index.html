@@ -151,39 +151,71 @@
             font-size: 0.9rem;
         }
 
-        /* 양방향 버튼 스타일 */
-        .interactive-box {
-            text-align: center;
-            background-color: #fffbeb;
-            padding: 25px;
+        /* 방문자 문의 폼 스타일 */
+        .contact-form-box {
+            background-color: #fffdf5;
+            padding: 30px;
             border-radius: 12px;
-            border: 2px dashed var(--primary-color);
+            border: 2px solid var(--border-color);
             margin-top: 30px;
         }
 
-        .interactive-btn {
+        .contact-form-box h3 {
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .contact-form-box p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(252, 163, 17, 0.15);
+        }
+
+        .submit-btn {
             background-color: var(--secondary-color);
             color: white;
             border: none;
             padding: 12px 24px;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: bold;
-            border-radius: 30px;
+            border-radius: 8px;
             cursor: pointer;
+            width: 100%;
             transition: 0.2s;
-            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
         }
 
-        .interactive-btn:hover {
+        .submit-btn:hover {
             background-color: #d04b02;
-            transform: translateY(-2px);
-        }
-
-        #message {
-            margin-top: 15px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--secondary-color);
         }
 
         @media (max-width: 640px) {
@@ -240,32 +272,35 @@
         </div>
     </section>
 
-    <!-- 양방향 상호작용 영역 (JavaScript 체험) -->
-    <section class="interactive-box">
-        <h3>✨ 방문자 응원 메시지</h3>
-        <p style="margin: 8px 0 15px 0; color: #555;">버튼을 누르면 멋진 응원 문구가 나타납니다!</p>
-        <button class="interactive-btn" onclick="showMessage()">응원 메시지 확인하기</button>
-        <div id="message"></div>
+    <!-- 방문자 문의/상담 신청 폼 영역 -->
+    <section class="contact-form-box">
+        <h3>📬 강의 문의 및 연락하기</h3>
+        <p>궁금한 점이나 강의 의뢰를 남겨주시면 빠르게 확인 후 연락드리겠습니다.</p>
+        
+        <!-- 
+          나중에 실제로 이메일을 받으려면 action="https://formspree.io/f/당신의고유주소" 형태로 연결하면 됩니다.
+          지금은 연습용 UI 형태로 구성해 두었습니다!
+        -->
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">성함 (또는 단체명)</label>
+                <input type="text" id="name" name="name" placeholder="예: 홍길동 / 학부모" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">연락처 / 이메일</label>
+                <input type="text" id="email" name="email" placeholder="회신받을 연락처나 이메일을 적어주세요" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">문의 내용</label>
+                <textarea id="message" name="message" rows="4" placeholder="강의 일정, 대상 등 문의하실 내용을 적어주세요." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">문의 내용 전송하기</button>
+        </form>
     </section>
 </div>
-
-<!-- 자바스크립트 코드 (양방향 동작 담당) -->
-<script>
-    function showMessage() {
-        const messages = [
-            "🎉 멋진 AI·SW 교육, 항상 응원합니다!",
-            "💻 우리 아이들의 미래 코딩 선생님, 화이팅!",
-            "🚀 상상력을 키워주는 최고의 수업이 될 거예요!",
-            "⭐ 오늘도 즐겁고 유익한 하루 보내세요!"
-        ];
-        
-        // 무작위로 문구 하나 선택
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        
-        // 화면의 #message 공간에 글자 띄우기
-        document.getElementById("message").innerText = messages[randomIndex];
-    }
-</script>
 
 </body>
 </html>
