@@ -8,9 +8,21 @@
 </head>
 <body>
 
-<div class="container">
+    <!-- 애플 스타일 상단 네비게이션 탭 바 -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <span class="nav-title">Heeyoung Kim</span>
+            <div class="nav-links">
+                <a href="#profile">프로필</a>
+                <a href="#curriculum">커리큘럼</a>
+                <a href="#contact">문의하기</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="container" id="profile">
     <!-- 프로필 헤더 카드 -->
-    <header>
+    <header class="card">
         <div class="profile-img-container">
             <img src="김희영증명사진.jpg" alt="김희영 프로필 사진" class="profile-img">
         </div>
@@ -24,7 +36,7 @@
     </header>
 
     <!-- 소개 카드 -->
-    <section>
+    <section class="card">
         <h2>소개</h2>
         <p class="intro">
             초등 고학년을 대상으로 인공지능과 소프트웨어 교육을 진행합니다. 
@@ -33,49 +45,43 @@
     </section>
 
     <!-- 주요 강의 과목 카드 -->
-    <section>
+    <section class="card">
         <h2>주요 강의 과목</h2>
         <div class="tags">
-            <span class="tag">엔트리(Entry) 블록코딩</span>
-            <span class="tag">디지털 윤리</span>
-            <span class="tag">CANVA 디자인 & AI</span>
-            <span class="tag">코딩 교구 (뚜루뚜루 등)</span>
+            <span class="tag">✨ 엔트리(Entry) 블록코딩</span>
+            <span class="tag">🛡️ 디지털 윤리</span>
+            <span class="tag">🎨 CANVA 디자인 & AI</span>
+            <span class="tag">🤖 코딩 교구 (뚜루뚜루 등)</span>
         </div>
     </section>
 
-    <!-- 자격증 및 전문성 카드 (새로 추가됨) -->
-    <section>
+    <!-- 자격증 및 전문성 카드 (날짜 삭제 완료) -->
+    <section class="card">
         <h2>자격증 및 전문성</h2>
         <div class="cert-grid">
             <div class="cert-item">
                 <span class="cert-name">AI코딩강사</span>
-                <span class="cert-date">2026.08 취득</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">구글 공인 교육 전문가 레벨 1</span>
-                <span class="cert-date">2026.06 취득</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">SW코딩 1급</span>
-                <span class="cert-date">2026.08 취득</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">컴퓨터응용기계설계기능사 (중급)</span>
-                <span class="cert-date">2003.12 취득</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">워드프로세서 2급</span>
-                <span class="cert-date">1997.03 취득</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">컴퓨터활용능력 3급</span>
-                <span class="cert-date">취득</span>
             </div>
         </div>
     </section>
 
     <!-- 강의 커리큘럼 카드 -->
-    <section>
+    <section class="card" id="curriculum">
         <h2>강의 커리큘럼</h2>
         
         <div class="item">
@@ -113,7 +119,7 @@
     </section>
 
     <!-- 강의 문의 폼 카드 -->
-    <section class="contact-form-box">
+    <section class="card contact-form-box" id="contact">
         <h3>강의 문의 및 의뢰</h3>
         <p>궁금하신 사항이나 일정 협의를 남겨주시면, 검토 후 빠르게 회신해 드리겠습니다.</p>
         
