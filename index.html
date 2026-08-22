@@ -9,6 +9,7 @@
 <body>
 
 <div class="container">
+    <!-- 프로필 헤더 카드 -->
     <header>
         <div class="profile-img-container">
             <img src="김희영증명사진.jpg" alt="김희영 프로필 사진" class="profile-img">
@@ -22,6 +23,7 @@
         </div>
     </header>
 
+    <!-- 소개 카드 -->
     <section>
         <h2>소개</h2>
         <p class="intro">
@@ -30,6 +32,7 @@
         </p>
     </section>
 
+    <!-- 주요 강의 과목 카드 -->
     <section>
         <h2>주요 강의 과목</h2>
         <div class="tags">
@@ -40,6 +43,38 @@
         </div>
     </section>
 
+    <!-- 자격증 및 전문성 카드 (새로 추가됨) -->
+    <section>
+        <h2>자격증 및 전문성</h2>
+        <div class="cert-grid">
+            <div class="cert-item">
+                <span class="cert-name">AI코딩강사</span>
+                <span class="cert-date">2026.08 취득</span>
+            </div>
+            <div class="cert-item">
+                <span class="cert-name">구글 공인 교육 전문가 레벨 1</span>
+                <span class="cert-date">2026.06 취득</span>
+            </div>
+            <div class="cert-item">
+                <span class="cert-name">SW코딩 1급</span>
+                <span class="cert-date">2026.08 취득</span>
+            </div>
+            <div class="cert-item">
+                <span class="cert-name">컴퓨터응용기계설계기능사 (중급)</span>
+                <span class="cert-date">2003.12 취득</span>
+            </div>
+            <div class="cert-item">
+                <span class="cert-name">워드프로세서 2급</span>
+                <span class="cert-date">1997.03 취득</span>
+            </div>
+            <div class="cert-item">
+                <span class="cert-name">컴퓨터활용능력 3급</span>
+                <span class="cert-date">취득</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 강의 커리큘럼 카드 -->
     <section>
         <h2>강의 커리큘럼</h2>
         
@@ -77,12 +112,12 @@
         </div>
     </section>
 
-    <!-- 애플 스타일 프리미엄 문의 폼 -->
+    <!-- 강의 문의 폼 카드 -->
     <section class="contact-form-box">
         <h3>강의 문의 및 의뢰</h3>
         <p>궁금하신 사항이나 일정 협의를 남겨주시면, 검토 후 빠르게 회신해 드리겠습니다.</p>
         
-        <form action="#" method="POST">
+        <form action="https://formspree.io/f/여기에_본인의_폼주소를_넣으세요" method="POST">
             <div class="form-group">
                 <label for="name">Name / Organization</label>
                 <input type="text" id="name" name="name" placeholder="성함 또는 단체명을 입력해주세요" required>
@@ -90,7 +125,7 @@
             
             <div class="form-group">
                 <label for="email">Contact / Email</label>
-                <input type="text" id="email" name="email" placeholder="회신받으실 연락처나 이메일을 입력해주세요" required>
+                <input type="email" id="email" name="_replyto" placeholder="회신받으실 이메일을 입력해주세요" required>
             </div>
             
             <div class="form-group">
