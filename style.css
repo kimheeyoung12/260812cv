@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #d97706;       /* 따뜻하고 세련된 앰버/코랄 톤 */
-    --accent-color: #b45309;
-    --text-color: #1d1d1f;          /* 애플 스타일 다크 그레이 (눈이 편안함) */
-    --bg-color: #f5f5f7;            /* 애플 특유의 은은한 실버/아이보리 배경 */
-    --card-bg: #ffffff;
-    --border-color: #e5e5ea;        /* 부드러운 라인 */
-    --input-bg: #fbfbfd;            /* 입력창 배경 (미세하게 따뜻한 화이트) */
+    --primary-color: #d97706;       /* 따뜻하고 세련된 앰버/코랄 포인트 */
+    --text-main: #1d1d1f;           /* 애플 스타일의 선명한 다크 그레이 */
+    --text-muted: #6e6e73;          /* 부드러운 회색 설명 텍스트 */
+    --bg-color: #f5f5f7;            /* 고급스러운 실버 톤 배경 */
+    --card-bg: #ffffff;             /* 카드 배경 */
+    --border-subtle: #d2d2d7;       /* 섬세한 경계선 */
+    --input-bg: #fbfbfd;            /* 입력창 배경 */
 }
 
 * {
@@ -18,7 +18,7 @@
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--text-main);
     line-height: 1.8;
     padding: 60px 20px;
 }
@@ -32,12 +32,12 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
-/* 프로필 헤더 (여유롭고 깔끔한 배치) */
+/* 프로필 헤더 영역 */
 header {
     display: flex;
     align-items: center;
-    gap: 40px;
-    border-bottom: 1px solid var(--border-color);
+    gap: 35px;
+    border-bottom: 1px solid var(--border-subtle);
     padding-bottom: 40px;
     margin-bottom: 45px;
 }
@@ -53,26 +53,26 @@ header {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .profile-text h1 {
-    font-size: 2.4rem;
-    color: var(--text-color);
+    font-size: 2.3rem;
+    color: var(--text-main);
     margin-bottom: 6px;
     font-weight: 700;
 }
 
 .profile-text p.subtitle {
     font-size: 1.1rem;
-    color: #6e6e73;
+    color: var(--text-muted);
     font-weight: 400;
     margin-bottom: 12px;
 }
 
 .contact-info {
     font-size: 0.95rem;
-    color: #86868b;
+    color: var(--text-muted);
 }
 
 section {
@@ -81,10 +81,9 @@ section {
 
 h2 {
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: var(--text-main);
     margin-bottom: 20px;
     font-weight: 600;
-    letter-spacing: -0.02em;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -93,18 +92,21 @@ h2 {
 h2::before {
     content: '';
     display: inline-block;
-    width: 6px;
+    width: 5px;
     height: 18px;
     background-color: var(--primary-color);
     border-radius: 3px;
 }
 
 .intro {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #48484a;
     word-break: keep-all;
     line-height: 1.9;
-    font-weight: 400;
+    background-color: #fafafc;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .tags {
@@ -115,21 +117,22 @@ h2::before {
 
 .tag {
     background-color: #f5f5f7;
-    color: #1d1d1f;
+    color: var(--text-main);
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 0.95rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
 }
 
 .tag:hover {
     background-color: #ebebf0;
+    transform: translateY(-1px);
 }
 
 .item {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     background: #fafafc;
     padding: 24px;
     border-radius: 20px;
@@ -139,7 +142,7 @@ h2::before {
 .item-title {
     font-weight: 600;
     font-size: 1.05rem;
-    color: #1d1d1f;
+    color: var(--text-main);
     margin-bottom: 10px;
     display: block;
 }
@@ -147,7 +150,7 @@ h2::before {
 ul {
     list-style-type: none;
     padding-left: 0;
-    color: #6e6e73;
+    color: var(--text-muted);
     font-size: 0.95rem;
 }
 
@@ -165,7 +168,7 @@ li:before {
     font-size: 1.2rem;
 }
 
-/* 🍏 애플 스타일 고급 문의 폼 */
+/* 🍏 애플 스타일의 모던하고 고급스러운 문의 폼 */
 .contact-form-box {
     background: #fafafc;
     padding: 45px 40px;
@@ -175,14 +178,14 @@ li:before {
 }
 
 .contact-form-box h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
+    font-size: 1.4rem;
+    color: var(--text-main);
     margin-bottom: 8px;
     font-weight: 700;
 }
 
 .contact-form-box p {
-    color: #6e6e73;
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 30px;
 }
@@ -193,9 +196,9 @@ li:before {
 
 .form-group label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: #86868b;
+    color: var(--text-muted);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -205,12 +208,12 @@ li:before {
 .form-group textarea {
     width: 100%;
     padding: 16px 20px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-subtle);
     border-radius: 14px;
     font-size: 1rem;
     outline: none;
     background-color: var(--input-bg);
-    color: var(--text-color);
+    color: var(--text-main);
     transition: all 0.3s ease;
 }
 
@@ -222,7 +225,7 @@ li:before {
 }
 
 .submit-btn {
-    background-color: var(--text-color);
+    background-color: var(--text-main);
     color: white;
     border: none;
     padding: 16px;
@@ -233,11 +236,13 @@ li:before {
     width: 100%;
     transition: all 0.3s ease;
     margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:hover {
     background-color: #3a3a3c;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 640px) {
