@@ -38,29 +38,47 @@
         }
 
         header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 24px;
             margin-bottom: 32px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 8px;
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            flex-shrink: 0;
         }
 
-        header p.subtitle {
-            font-size: 1.2rem;
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-text h1 {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .profile-text p.subtitle {
+            font-size: 1.15rem;
             color: #4b5563;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #4b5563;
         }
 
@@ -134,6 +152,10 @@
         }
 
         @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
             .container {
                 padding: 24px 16px;
             }
@@ -144,10 +166,15 @@
 
 <div class="container">
     <header>
-        <h1>김희영</h1>
-        <p class="subtitle">초등 학생들의 눈높이에 맞춘 AI·SW 전문강사 💡</p>
-        <div class="contact-info">
-            <span>📧 이메일: heeyoung4861@gmail.com</span>
+        <div class="profile-img-container">
+            <img src="김희영증명사진.jpg" alt="김희영 프로필 사진" class="profile-img">
+        </div>
+        <div class="profile-text">
+            <h1>김희영</h1>
+            <p class="subtitle">초등 학생들의 눈높이에 맞춘 AI·SW 전문강사 💡</p>
+            <div class="contact-info">
+                <span>📧 이메일: heeyoung4861@gmail.com</span>
+            </div>
         </div>
     </header>
 
